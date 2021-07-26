@@ -12,7 +12,7 @@ The pandemic took the world by storm. It pillaged our healthcare systems and cau
 
 Though the problem of fake/biased news may be too hard for humans to solve, computers aren’t out of the question. We can use machine learning models to automate the detection of fake and politically biased news, and hopefully stop it.
 
-#What it Does:
+# What it Does:
 
 The finished product is a fully functioning website. On the site, you enter a piece of text into a textbox, and then click verify to check the reliability of the text. Once the verify button is pressed, the site will state whether the text is fake, and the political bias of the text.
 
