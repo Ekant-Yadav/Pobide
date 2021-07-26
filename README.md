@@ -57,7 +57,7 @@ We are proud of the extreme amount of work put into this project. This was our f
 
 
 
-#What’s Next for PoBiDe.ai?
+# What’s Next for PoBiDe.ai?
 
 We have big goals. One feature that we hope to add in the future is the ability for users to provide data to train the model. This will make the model more accurate and versatile. One key feature needed is to add user accounts to the website, making it harder for people to sway the results.
 
