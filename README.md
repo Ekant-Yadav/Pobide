@@ -6,7 +6,7 @@ PoBiDe.Ai is a project aimed to address the problem of fake information and bias
 The namesake of PoBiDe comes from the first two letters of every word in "Political Bias Detector"; pair this with artificial intelligence, and you have our name, "PoBiDe.Ai".
 
 
-#Inspiration:
+# Inspiration:
 
 The pandemic took the world by storm. It pillaged our healthcare systems and caused millions of deaths. But if there were one thing to take out of it, it would be the effect of fake and biased news on the population.
 
@@ -17,7 +17,7 @@ Though the problem of fake/biased news may be too hard for humans to solve, comp
 The finished product is a fully functioning website. On the site, you enter a piece of text into a textbox, and then click verify to check the reliability of the text. Once the verify button is pressed, the site will state whether the text is fake, and the political bias of the text.
 
 
-#How we built it:
+# How we built it:
 
 Though the website design seems relatively simple, the inner workings of the program are not as much. To detect fake news we used Sci-kit Learn’s Passive-Aggressive Classifier, and for political bias, we used a fine-tuned version of Google’s Bidirectional Encoder Representations from Transformers(BERT) hooked up to a long short term memory(LSTM) layer attached to a standard fully connected(FC) layer. Through a vast amount of testing, these models had the best accuracy on test datasets.
 
@@ -34,7 +34,7 @@ The political bias detector uses Google’s BERT to transform data. This transfo
 
 
 
-#Challenges we ran into:
+# Challenges we ran into:
 
 There are not a lot of publicly available political bias datasets on the web. Our team spent a good chunk of time finding and preparing datasets for usage. After a ton of time and research, we found the Ideological Book Corpus, a dataset with 4062 individual labeled text samples (Ideological Books Corpus (umass.edu)). Though we found the dataset at the end, it proved hard to obtain.
 
@@ -45,7 +45,7 @@ The political bias detector also had its fair share of problems. We first tried 
 
 
 
-#Accomplishments We’re Proud Of:
+# Accomplishments We’re Proud Of:
 
 We are proud of the extreme amount of work put into this project. This was our first time doing an NLP project using Google’s BERT, and we are pleased that it worked so well.
 
