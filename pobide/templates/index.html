@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito&display=swap" rel="stylesheet">
+
+    {% load static %}
+    <link href="{% static 'main.css' %}" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <nav class="nav-bar"><div><img src="{% static 'drawing.png' %}" width="200px" alt=""></div></nav>
+
+
+    <div class="container">
+
+      <div class="input">
+        <form action="/verify" method="POST">
+          {% csrf_token %}
+          <textarea class="textarea" placeholder="Enter News Here" name="input">{{news}}
+
+            </textarea
+          >
+          <button typr="submit" class="button">Verify</button>
+        </form>
+      </div>
+
+      <div class="output">
+        <div class="heading">Verification:</div>
+        <div class="fake" id="ans">{{validity}}</div>
+        <div class="heading">Biases:</div>
+        <div class="list">
+          <ul>
+            <li>Political Left</li>
+            <li>Religious</li>
+            <li>Coprorate</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="wikiarticle">
+      <img src="{% static 'Wikipedia_Logo_1.0.png' %}" width="80px" alt="">
+      <div class="wikiheading">Related Wiki Article</div>
+    </div>
+    {% if op %}
+    <div class="wikiarticle">{{wiki}}</div>
+    {% else %}
+    <div class="iframe" ><iframe src={{wiki}} width="100%" height="400px"></iframe></div>
+    {% endif%}
+    
+    {% load static %}
+    <script src="{% static 'index.js' %}" ></script>
+  </body>
+</html>
