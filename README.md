@@ -1,4 +1,4 @@
-# Pobide
+# PoBiDe.Ai
 
 
 PoBiDe.Ai is a project aimed to address the problem of fake information and bias in news. It uses advanced natural language processing and machine learning algorithms to automate the detection of fake news and political bias.
