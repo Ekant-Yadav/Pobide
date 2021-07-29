@@ -9,7 +9,7 @@ def index(request):
 
 def verify(request):
     if request.method=='POST':
-        news = request.POST.get('input')
+        news = request.POST.get('input').rstrip()
         # print(news)
         validity = mlmodel.verification(str(news))
         # bias = mlmodel.biases(news)
@@ -19,10 +19,10 @@ def verify(request):
         # print(op)
         wiki=wiki[1:]
         # soup = BeautifulSoup(wiki,"html5lib")
-        # print(wiki)
+        print(wiki)
         # return HttpResponse(wiki)
         context={
-            'news':news,
+            'news':news.rstrip(),
             'validity': "False" if validity[0]==1 else "True",
             # 'bias':bias
             'wiki': wiki,

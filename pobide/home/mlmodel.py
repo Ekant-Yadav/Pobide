@@ -87,9 +87,9 @@ class MisinformationDetector():
 				return ("1"+wikipedia.summary(news))
 			return ("2"+wikipedia.page(title=term).url)
 		except PageError:
-			return ("Page not found")
+			return ("1Page not found")
 		except DisambiguationError:
-			return ("Too many results for page or query too vague")
+			return ("1Too many results for page or query too vague")
 
 # news="Last year a mysterious shipment was caught smuggling Coronavirus from Canada. It was traced to Chinese agents working at a Canadian lab. Subsequent investigation by GreatGameIndia linked the agents to Chinese Biological Warfare Program from where the virus is suspected to have leaked causing the Wuhan Coronavirus outbreak. The findings of this investigation has been corroborated by none other than the Bioweapons expert Dr. Francis Boyle who drafted the Biological Weapons Convention Act followed by many nations. The report has caused a major international controversy and is suppressed actively by a section of mainstream media."
 
