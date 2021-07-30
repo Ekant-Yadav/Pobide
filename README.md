@@ -32,7 +32,8 @@ As one may see, there are two parts to this problem, each requiring a detector, 
 
 The Disinformation Detector uses a [TF-IDF Vectorizer](https://medium.com/@cmukesh8688/tf-idf-vectorizer-scikit-learn-dbc0244a911a) to transform the dataset into a way that can be processed by the model, or a sparse matrix of TF-IDF features. The model and vectorizer are trained and saved onto pickled files. The model and vectorizer can be loaded and can predict text inputs in split-second time.
 
-The Political Biases Classifier uses Google's BERT, followed by an LSTM layer, and some simple neural network layers. The layers following BERT classify the data. This classifier consumes the output hidden state tensors from BERT — using them to predict whether the input statement is Liberal, Conservative, or Neutral. The pre-trained BERT model used is 'bert-base-uncased', and transformers.AutoTokenizer is used to convert the input data to the form which can be processed by the pre-trained BERT model.
+
+The Political Biases Classifier uses Google's BERT, followed by an LSTM layer, and some simple neural network layers. The layers following BERT classify the data. This classifier consumes the output hidden state tensors from BERT — using them to predict whether the input statement is Liberal, Conservative, or Neutral. The pre-trained BERT model used is ['bert-base-uncased'](https://huggingface.co/bert-base-uncased), and [transformers.AutoTokenizer](https://huggingface.co/transformers/model_doc/auto.html) is used to convert the input data to the form which can be processed by the pre-trained BERT model.
 
 
 
