@@ -5,6 +5,9 @@ PoBiDe.Ai is a project aimed to address the problem of fake information and bias
 
 The namesake of PoBiDe comes from the first two letters of every word in "Political Bias Detector"; pair this with artificial intelligence, and you have our name, "PoBiDe.Ai".
 
+# ---IMPORTANT--- #
+To run the code download the variables(450mb) folder from this google drive link: https://drive.google.com/drive/folders/114O96Jhxchf5wwsIMiC0OI4BT4AiYyD6?usp=sharing
+and replace the variable folder in saved_model directory with the one in googledrive download
 
 # Inspiration:
 
@@ -59,4 +62,3 @@ We're proud of the massive amount of work and dedication put into this project. 
 We have big goals. One feature that we hope to add in the future is the ability for users to provide data to train the model. This will make the model more accurate and versatile. One key feature needed is to add user accounts to the website, making it harder for people to sway the results.
 
 Another goal is to make it so that the model can predict on audio recordings and images. This will make the model more convenient for the end-user.
-
