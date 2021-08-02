@@ -32,7 +32,7 @@
           {% csrf_token %}
           <textarea
             class="textarea"
-            placeholder="Enter News Here"
+            placeholder="Enter news in the text box, pobide.Ai will scan it and tell you whether it seems true or false, and the political bias of the text!"
             name="input"
           ></textarea>
           <button type="submit" class="button">Verify</button>
@@ -41,6 +41,14 @@
       <!-- <div class="waiting">
         <div>Waiting...</div>
       </div> -->
+    </div>
+    <div class="disclaimer">
+      Disclaimer: Please realize that the verification is not always correct,
+      please check established fact check sites if you want more accurate
+      results. Being categorized using our
+      classification algorithm only means that the input text is similar to
+      that of other text with the same category, it does not mean for certain
+      that the category established is correct.
     </div>
 
     <!-- Yoinked Code -->

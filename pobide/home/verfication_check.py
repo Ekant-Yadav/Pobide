@@ -78,8 +78,11 @@ class MisinformationDetector():
 		return(self.model.predict(self.tV.transform([string])))
 	
 	def search(self,news):
+		if len(news)>300:
+			news=news[:250]
 		try:
 			term = wikipedia.suggest(news)
+			# term = None
 			if term == None:
 				return ("1"+wikipedia.summary(news))
 			return ("2"+wikipedia.page(title=term).url)

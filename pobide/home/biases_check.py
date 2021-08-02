@@ -13,7 +13,6 @@ class Biases():
 
     def load(self, model_path):
         self.model = tf.saved_model.load(model_path)
-        # self.model = None
 
     def clean_text(self, text):
         text = re.sub(r'[^a-zA-Z\']', ' ', text)
@@ -43,5 +42,5 @@ class Biases():
             
 def biases(news):
     model = Biases()
-    model.load('./saved_model/')
+    model.load('saved_model')
     return model.predict(news)
