@@ -32,16 +32,12 @@
       </div>
 
       <div class="output">
-        <div class="heading">Verification:</div>
+        <div class="heading">Verification</div>
+        <div class="bottom">It seems:</div>
         <div class="fake" id="ans">{{validity}}</div>
-        <div class="heading">Biases:</div>
-        <div class="list">
-          <ul>
-            <li>Political Left</li>
-            <li>Religious</li>
-            <li>Coprorate</li>
-          </ul>
-        </div>
+        <div class="heading">Biases</div>
+        <div class="bottom">Mostly:</div>
+        <div class="bias" id="ans2">{{bias}}</div>
       </div>
     </div>
     <div class="wikiarticle">
@@ -56,6 +52,8 @@
     
     {% load static %}
     <script src="{% static 'index.js' %}" ></script>
+
+
 
     <!-- Yoinked Code -->
     <footer class="site-footer">

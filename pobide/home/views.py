@@ -1,7 +1,7 @@
 # from django.http.request import HttpRequest
 # from django.http.response import HttpResponse
 from django.shortcuts import render
-from home import mlmodel
+from home import verfication_check, biases_check
 # from bs4 import BeautifulSoup
 
 def index(request):
@@ -11,20 +11,17 @@ def verify(request):
     if request.method=='POST':
         news = request.POST.get('input').rstrip()
         # print(news)
-        validity = mlmodel.verification(str(news))
-        # bias = mlmodel.biases(news)
-        wiki = mlmodel.wiki(str(news))
-        # wiki ="www.google.com"
+        validity = verfication_check.verification(str(news))
+        wiki = verfication_check.wiki(str(news))
         op= 1 if wiki[0]=="1" else None
-        # print(op)
         wiki=wiki[1:]
-        # soup = BeautifulSoup(wiki,"html5lib")
-        print(wiki)
-        # return HttpResponse(wiki)
+
+        bias = biases_check.biases(news)
+        
         context={
             'news':news.rstrip(),
             'validity': "False" if validity[0]==1 else "True",
-            # 'bias':bias
+            'bias': bias,
             'wiki': wiki,
             'op':op,
         }
